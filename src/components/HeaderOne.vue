@@ -25,7 +25,7 @@ defineProps({
 
 const emit = defineEmits(["scrollToSection"]);
 
-const menuItems = ref(["HOME", "ABOUT ME", "CLONE CODING", "PUBLISHING"]);
+const menuItems = ref(["HOME", "ABOUT ME", "CLONE CODING", "ETC"]);
 
 const scrollToSection = (item) => {
   if (item === "HOME") {

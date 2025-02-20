@@ -53,7 +53,7 @@ const cards = ref([
   { id: 5, name: "인터랙티브 웹 구현<br>Grid 레이아웃 적용", category: "Animation", images: "./images/grid.png" },
   { id: 6, name: "인터랙티브 웹 구현<br>스크롤 애니메이션", category: "Animation", images: "./images/scroll.png" },
   { id: 7, name: "Parallax 스크롤링", category: "Animation", images: "./images/parallax_scroll.png" },
-  { id: 8, name: "프로그래스 바<br>애니메이션", category: "Animation", images: "./images/progress.png" },
+  { id: 8, name: "프로그래스 바<br>애니메이션", category: "Animation", images: "./images/progressbar.png" },
   { id: 9, name: "비밀번호 입력 및<br>로그인 버튼 인터랙션", category: "Java Script", images: "./images/login.png" },
   { id: 10, name: "기념일 계산기", category: "Java Script", images: "./images/time_calc.png" },
   { id: 11, name: "Vue3에서 Chart.js 적용", category: "Java Script", images: "./images/chart.png" },
@@ -177,7 +177,7 @@ const nextPage = () => {
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   margin-top: 20px;
   justify-content: center;
   position: relative;
@@ -225,13 +225,32 @@ button:nth-of-type(2){
   background-color: none; 
 }
   /* 반응형 테블릿 */
-  @media all and (max-width:1023px) { 
+  @media all and (max-width:1024px) { 
+    /* 타이틀제목 */
     h2.section_title{
       max-width: 768px;
     }
+    button:nth-of-type(1){
+      top: 50%;
+      left: 0%;
+      transform: translateY(-50%);
+    }
+    button:nth-of-type(2){
+      top: 50%;
+      right: 0%;
+      transform: translateY(-50%);
+    }
+    .card-container{
+      display: flex;
+      gap: 0;
+    }
+    .card{
+      width: 160px;
+      height: 160px;
+    }
   }
   /* 반응형 모바일 max*/
-  @media all and (max-width:767px) {
+  @media all and (max-width:768px) {
     h2.section_title{
       max-width: 400px;
       font-size: 50px;
@@ -245,38 +264,34 @@ button:nth-of-type(2){
       white-space: nowrap;
     }
     .card{
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
+      margin: 20px;
     }
     .card_txt{
-      font-size: 14px;
+      font-size: 12px;
       white-space: nowrap;
     }
     button{
       font-size: 50px;
     }
-    button:nth-of-type(1){
-      top: 50%;
-      left: 0%;
-      transform: translateY(-50%);
-    }
-    button:nth-of-type(2){
-      top: 50%;
-      right: 0%;
-      transform: translateY(-50%);
-    }
+
 
   }
 /* 반응형 모바일 min */
   @media all and (max-width:479px) {
     h2.section_title{
       max-width: 320px;
-      font-size: 45px;
+      font-size: 40px;
       text-align: center;
     }
+    .card-container{
+      gap: 0;
+    }
     .card{
-      width: 100px;
-      height: 100px;
+      width: 110px;
+      height: 110px;
+      margin: 20px;
     }
     .card > .card_txt{
       width: 100%;

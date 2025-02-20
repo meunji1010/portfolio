@@ -9,7 +9,7 @@
     <div class="clone_wrap fade-item" ref="item0" :class="{ 'fade-in': isVisible.item0 }">
       <p class="clone_number number_one">01</p>
       <div class="clone_item">
-        <a href="https://meunji1010.github.io/netflix/"><div class="netflix clone_img"></div></a>
+        <a href="https://meunji1010.github.io/netflix/"><div class="netflix clone_img" :style="{backgroundImage: `url(${imgRef[0].images})`}"></div></a>
         <div class="clone_container">
           <p class="clone_name">Netflix Clone</p>
           <p class="clone_title">React 기반 웹 구현</p>
@@ -47,7 +47,7 @@
           <p>배포방식 : GitHub</p>
           <a href=""><button>GitHub 방문하기</button></a>
         </div>
-        <a href="https://meunji1010.github.io/TESLA/index.html"><div class="tesla clone_img"></div></a>
+        <a href="https://meunji1010.github.io/TESLA/index.html"><div class="tesla clone_img" :style="{backgroundImage: `url(${imgRef[1].images})`}"></div></a>
       </div>
     </div>
 
@@ -55,7 +55,7 @@
     <div class="clone_wrap fade-item" ref="item2" :class="{ 'fade-in': isVisible.item2 }">
       <p class="clone_number number_three">03</p>
       <div class="clone_item">
-        <a href="https://meunji1010.github.io/TESLA/index.html"><div class="airbnb clone_img"></div></a>
+        <a href="https://meunji1010.github.io/TESLA/index.html"><div class="airbnb clone_img" :style="{backgroundImage: `url(${imgRef[2].images})`}"></div></a>
         <div class="clone_container">
           <p class="clone_name">Airbnb Clone</p>
           <p class="clone_title">반응형 숙박 예약 웹사이트</p>
@@ -94,7 +94,7 @@
           <a href="https://github.com/meunji1010/meunji1010.github.io/tree/main/momentum"><button>GitHub 방문하기</button></a>
           <p></p>
         </div>
-        <a href="https://meunji1010.github.io/netflix/"><div class="momentum clone_img"></div></a>
+        <a href="https://meunji1010.github.io/netflix/"><div class="momentum clone_img" :style="{backgroundImage: `url(${imgRef[3].images})`}"></div></a>
       </div>
     </div>
   </div>
@@ -103,6 +103,12 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 
+const imgRef = ref([
+  {id:1, images:"./images/netflix.png"},
+  {id:2, images:"./images/tesla.png"},
+  {id:3, images:"./images/airbnb.png"},
+  {id:4, images:"./images/momentum.png"}
+]);
 // 요소별 상태 관리
 const isVisible = ref({
   title: false,
@@ -203,9 +209,6 @@ onUnmounted(() => {
     background-size: cover;
     background-repeat: no-repeat;
   }
-  .netflix{
-    background-image: url(./images/netflix.png);
-  }
   
   /* 클론이름 */
   .clone_wrap{
@@ -276,16 +279,7 @@ onUnmounted(() => {
     align-self: first baseline;
     margin-left: 20%;
   }
-  .section-two .tesla{
-    background-image: url(./images/tesla.png);
-    background-size: cover;
-  }
-  .section-two .airbnb{
-    background-image: url(./images/airbnb.png);
-    background-size: cover;
-  }
-  .section-two .momentum{
-    background-image: url(./images/momentum.png);
+  .section-two{
     background-size: cover;
   }
   /* 애니메이션 */
@@ -339,9 +333,16 @@ onUnmounted(() => {
   }
   /* 반응형 모바일 min */
 @media all and (max-width:479px) {
+  .section-two{
+    margin-bottom: 150px;
+  }
   .section-two .clone_item > a{
     width: 300px;
     height: 200px;
+  }
+  h2.section_title{
+    padding: 10px;
+    font-size: 40px;
   }
 }
 
