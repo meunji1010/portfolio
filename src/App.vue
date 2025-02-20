@@ -45,17 +45,25 @@ onUnmounted(() => {
 
 const handleScrollToSection = (sectionName) => {
   let targetSection = null;
+  let offset = 0; // 기본값
 
-  if (sectionName === "ABOUT ME") targetSection = sectionOne.value;
-  else if (sectionName === "CLONE CODING") targetSection = sectionTwo.value;
-  else if (sectionName === "PUBLISHING") targetSection = publishing.value;
-  else if (sectionName === "ETC") targetSection = sectionThree.value;
+  if (sectionName === "ABOUT ME") {
+    targetSection = sectionOne.value;
+    offset = 150; 
+  } else if (sectionName === "CLONE CODING") {
+    targetSection = sectionTwo.value;
+    offset = 100; 
+  } else if (sectionName === "PUBLISHING") {
+    targetSection = publishing.value;
+    offset = 0; 
+  } else if (sectionName === "ETC") {
+    targetSection = sectionThree.value;
+    offset = 0; 
+  }
 
   if (targetSection) {
-    targetSection.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
+    const top = targetSection.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: "smooth" });
   }
 };
 </script>

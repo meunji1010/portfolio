@@ -192,12 +192,12 @@ button{
 }
 button:nth-of-type(1){
   top: 50%;
-  left: 10%;
+  left: 5%;
   transform: translateY(-50%);
 }
 button:nth-of-type(2){
   top: 50%;
-  right: 10%;
+  right: 5%;
   transform: translateY(-50%);
 }
 /* 카드 스타일 */

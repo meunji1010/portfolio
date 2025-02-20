@@ -55,7 +55,7 @@
     <div class="clone_wrap fade-item" ref="item2" :class="{ 'fade-in': isVisible.item2 }">
       <p class="clone_number number_three">03</p>
       <div class="clone_item">
-        <a href="https://meunji1010.github.io/TESLA/index.html"><div class="airbnb clone_img" :style="{backgroundImage: `url(${imgRef[2].images})`}"></div></a>
+        <a href="https://meunji1010.github.io/AIRBNB/index.html"><div class="airbnb clone_img" :style="{backgroundImage: `url(${imgRef[2].images})`}"></div></a>
         <div class="clone_container">
           <p class="clone_name">Airbnb Clone</p>
           <p class="clone_title">반응형 숙박 예약 웹사이트</p>
@@ -94,7 +94,7 @@
           <a href="https://github.com/meunji1010/meunji1010.github.io/tree/main/momentum"><button>GitHub 방문하기</button></a>
           <p></p>
         </div>
-        <a href="https://meunji1010.github.io/netflix/"><div class="momentum clone_img" :style="{backgroundImage: `url(${imgRef[3].images})`}"></div></a>
+        <a href="https://meunji1010.github.io/momentum/index.html"><div class="momentum clone_img" :style="{backgroundImage: `url(${imgRef[3].images})`}"></div></a>
       </div>
     </div>
   </div>
@@ -104,10 +104,10 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const imgRef = ref([
-  {id:1, images:"./images/netflix.png"},
-  {id:2, images:"./images/tesla.png"},
-  {id:3, images:"./images/airbnb.png"},
-  {id:4, images:"./images/momentum.png"}
+  {id:1, images:"./images/netflix_clone.webp"},
+  {id:2, images:"./images/tesla_clone.webp"},
+  {id:3, images:"./images/airbnb_clone.webp"},
+  {id:4, images:"./images/momentum_clone.webp"}
 ]);
 // 요소별 상태 관리
 const isVisible = ref({
@@ -197,8 +197,8 @@ onUnmounted(() => {
   /* 클론 이미지 */
   .section-two .clone_item >a{
     display: block;
-    width: 400px;
-    height: 320px;
+    width: 650px;
+    height: 400px;
   }
   .section-two a > div{
     width: 100%;
@@ -228,6 +228,9 @@ onUnmounted(() => {
   /* 클론설명 */
   .clone_container{
     margin: 30px;
+    background-color: #666;
+    padding: 20px;
+    border-radius: 10px;
   }
   .clone_container a{
     text-align: center;
@@ -275,10 +278,14 @@ onUnmounted(() => {
     cursor: pointer;
   }
   /* 2~4번까지 설명*/
+  p.number_one, p.number_three{
+    margin-right: 25%;
+  }
   p.number_two, p.number_four{
     align-self: first baseline;
     margin-left: 20%;
   }
+  
   .section-two{
     background-size: cover;
   }
@@ -337,8 +344,8 @@ onUnmounted(() => {
     margin-bottom: 150px;
   }
   .section-two .clone_item > a{
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 220px;
   }
   h2.section_title{
     padding: 10px;

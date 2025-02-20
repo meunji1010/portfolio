@@ -36,22 +36,29 @@
       <section class="who-am-i">
         <h3>WHO AM I</h3>
         <p>
-          10년 넘게 한 가지 일에 몰두하며 책임감을 키워온 저는, 이제 프론트엔드 개발자로 새로운 도전을 시작합니다.<br>
-          코드가 언어처럼 소통의 도구라는 점에서 깊은 유대감을 느끼고, 끊임없이 성장하고 있습니다.<br>
-          사용자 경험을 고려한 직관적인 UI 개발과 끈기를 바탕으로 문제를 끝까지 해결하는 힘이 저의 가장 큰 강점입니다.
+          10년 넘게 한 가지 일에 몰두하며 책임감을 키워온 저는, 이제 프론트엔드 개발자로서 새로운 도전을 시작합니다.<br>
+          오랜 시간 한 분야에서 쌓아온 경험은 단순한 기술력뿐만 아니라,<br> 
+          끈기와 문제 해결 능력, 그리고 책임감을 기르는 데 큰 밑바탕이 되었습니다.<br>
+          웹 개발은 단순히 기능을 구현하는 것을 넘어,<br>
+          사용자가 직관적으로 이해하고 편리하게 사용할 수 있는 UI/UX를 설계하는 과정이라고 생각합니다.<br>
+          이러한 점에서 저는 코드 한 줄 한 줄에도 사용자의 경험을 최우선으로 고려하며 개발하고자 합니다.<br>
+          앞으로도 더 나은 사용자 경험을 제공하는 개발자가 되기 위해 최신 기술을 배우고,<br>
+          깊이 있는 고민을 지속하며, 협업하는 과정에서 더 큰 가치를 만들어 나가고자 합니다.
         </p>
       </section>
       
     </div>
 
     <!-- 오른쪽 프로필 이미지 -->
-    <div class="image-box">사진</div>
+    <div class="image-box" :style="{backgroundImage: `url(${img[0].img})`}"></div>
   </div>
 </template>
 
 <script setup>
+
 import { ref, onMounted, onUnmounted } from 'vue';
 
+const img = ref([{id:1, img:"./images/me.jpg"}])
 const sectionOne = ref(null);
 const titleSection = ref(null);
 const isVisible = ref(false);
@@ -110,18 +117,31 @@ onUnmounted(() => {
 /* ABOUT ME 제목 */
 .h2{
   display: flex;
+  justify-content: center;
 }
 .section_title {
   font-size: 80px;
-  align-self: flex-start;
+  align-self: center;
+  text-align: center;
+  width: 60%;
 }
 
 /* INTRO & SKILLS 컨테이너 */
 .intro {
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid white;
+  position: relative; /* 가상 요소 위치 설정 */
   padding-bottom: 20px;
+}
+
+.intro::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* border-bottom 두께 */
+  background: linear-gradient(90deg, #78ace4, #6f41b6); /* 그라디언트 적용 */
 }
 .skills ul {
   display: grid;
@@ -151,10 +171,21 @@ onUnmounted(() => {
 .info, .skills {
   width: 45%;
   box-sizing: border-box;
-  border-top: 2px solid #fff;
+  position: relative; /* 가상 요소 위치 조정 */
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+.info::before, .skills::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* border-top 두께 */
+  background: linear-gradient(90deg, #78ace4, #6f41b6); /* 그라디언트 적용 */
+}
+
 
 .info h3, .skills h3, .who-am-i h3 {
   font-size: 36px;
@@ -189,9 +220,10 @@ onUnmounted(() => {
   align-items: center;
 }
 .image-box {
-  width: 200px;
-  height: 250px;
-  background-color: #444;
+  background-size: cover;
+  width: 400px;
+  height: 500px;
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -266,7 +298,8 @@ onUnmounted(() => {
       font-size: 16px;
     }
     .image-box{
-      width: 100%;
+      width: 300px;
+      height: 400px;
       margin-bottom: 10px;
     } 
     .skills > ul{
@@ -287,6 +320,10 @@ onUnmounted(() => {
   }
   .section-one span{
     font-size: 16px;
+  }
+  .image-box{
+    width: 300px;
+    height: 400px;
   }
 }
 </style>
