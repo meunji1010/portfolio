@@ -1,56 +1,51 @@
 <template>
   <!-- ABOUT ME section -->
-  <div class="h2" ref="titleSection" :class="{ 'visible' : isVisible }">
-    <h2 class="section_title border_bottom">ABOUT ME</h2>
-  </div>
-  <div ref="sectionOne" class="section-one" :class="{ 'visible': isVisible }">
-  
-    <!-- 텍스트 영역 -->
-    <div class="text-content">
-      
-      <section class="intro">
-        
-        <div class="info">
-          <h3>INTRODUCE</h3>
-          <ul>
-            <li><span>Name :</span> 심은지</li>
-            <li><span>Phone :</span> 010-6245-4127</li>
-            <li><span>Email :</span> meunji1010@gmail.com</li>
-          </ul>
-        </div>
-
-        <div class="skills">
-          <h3>SKILLS</h3>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JS</li>
-            <li>PHOTOSHOP</li>
-            <li>ILLUSTRATOR</li>
-            <li>REACT</li>
-            <li>VUE</li>
-          </ul>
-        </div>
-      </section>
-      
-      <section class="who-am-i">
-        <h3>WHO AM I</h3>
-        <p>
-          10년 넘게 한 가지 일에 몰두하며 책임감을 키워온 저는, 이제 프론트엔드 개발자로서 새로운 도전을 시작합니다.<br>
-          오랜 시간 한 분야에서 쌓아온 경험은 단순한 기술력뿐만 아니라,<br> 
-          끈기와 문제 해결 능력, 그리고 책임감을 기르는 데 큰 밑바탕이 되었습니다.<br>
-          웹 개발은 단순히 기능을 구현하는 것을 넘어,<br>
-          사용자가 직관적으로 이해하고 편리하게 사용할 수 있는 UI/UX를 설계하는 과정이라고 생각합니다.<br>
-          이러한 점에서 저는 코드 한 줄 한 줄에도 사용자의 경험을 최우선으로 고려하며 개발하고자 합니다.<br>
-          앞으로도 더 나은 사용자 경험을 제공하는 개발자가 되기 위해 최신 기술을 배우고,<br>
-          깊이 있는 고민을 지속하며, 협업하는 과정에서 더 큰 가치를 만들어 나가고자 합니다.
-        </p>
-      </section>
-      
+  <div class="section-wrap">
+    <div class="h2" ref="titleSection" :class="{ 'visible' : isVisible }">
+      <h2 class="section_title border_bottom">ABOUT ME</h2>
     </div>
+    <div ref="sectionOne" class="section-one" :class="{ 'visible': isVisible }">
+    
+      <!-- 텍스트 영역 -->
+      <div class="text-content">
+        
+        <section class="intro">
+          <div class="info">
+            <h3>INTRODUCE</h3>
+            <ul>
+              <li><span>Name :</span> 심은지</li>
+              <li><span>Phone :</span> 010-6245-4127</li>
+              <li><span>Email :</span> meunji1010@gmail.com</li>
+            </ul>
+          </div>
+          <section class="who-am-i">
+          <h3>WHO AM I</h3>
+          <p>
+            10년 넘게 한 가지 일에 몰두하며 책임감을 키워온 저는, 이제 프론트엔드 개발자로 새로운 도전을 시작합니다.<br>
+            코드가 언어처럼 소통의 도구라는 점에서 깊은 유대감을 느끼고, 끊임없이 성장하고 있습니다.<br>
+            사용자 경험을 고려한 직관적인 UI 개발과 끈기를 바탕으로 문제를 끝까지 해결하는 힘이 저의 가장 큰 강점입니다.
+          </p>
+        </section>
 
-    <!-- 오른쪽 프로필 이미지 -->
-    <div class="image-box" :style="{backgroundImage: `url(${img[0].img})`}"></div>
+        </section>
+        
+        
+        
+      </div>
+      <div class="image-box" :style="{backgroundImage: `url(${img[0].img})`}"></div>
+    </div>
+    <div class="skills">
+            <h3>SKILLS</h3>
+            <ul>
+              <li :style="{backgroundImage: `url(${icon[0].img})`}"></li>
+              <li :style="{backgroundImage: `url(${icon[1].img})`}"></li>
+              <li :style="{backgroundImage: `url(${icon[2].img})`}"></li>
+              <li :style="{backgroundImage: `url(${icon[3].img})`}"></li>
+              <li :style="{backgroundImage: `url(${icon[4].img})`}"></li>
+              <li :style="{backgroundImage: `url(${icon[5].img})`}"></li>
+              <li :style="{backgroundImage: `url(${icon[6].img})`}"></li>
+            </ul>
+          </div>
   </div>
 </template>
 
@@ -58,6 +53,15 @@
 
 import { ref, onMounted, onUnmounted } from 'vue';
 
+const icon = ref([
+  {id:1, img:"./images/HTML5.svg"},
+  {id:2, img:"./images/CSS.svg"},
+  {id:3, img:"./images/JavaScript.svg"},
+  {id:4, img:"./images/photoshop.png"},
+  {id:5, img:"./images/Illustrator.svg"},
+  {id:6, img:"./images/React.svg"},
+  {id:7, img:"./images/Vue.png"}
+]);
 const img = ref([{id:1, img:"./images/me.jpg"}])
 const sectionOne = ref(null);
 const titleSection = ref(null);
@@ -85,16 +89,22 @@ onUnmounted(() => {
 
 
 <style scoped>
-/* 전체 섹션 */
+.section-wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .section-one {
   font-family: 'TheJamsil3Regular';
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 50px 20px;
+  padding-top: 100px;
   opacity: 0;
   transform: translateY(50px); 
   transition: opacity 1.5s ease-out, transform 0.8s ease-out;
+  gap: 20px;
 }
 .h2, .section-one {
   opacity: 0;
@@ -111,13 +121,13 @@ onUnmounted(() => {
 .text-content {
   display: flex;
   flex-direction: column;
-  width: 65%;
 }
 
 /* ABOUT ME 제목 */
 .h2{
   display: flex;
   justify-content: center;
+  width: 60%;
 }
 .section_title {
   font-size: 80px;
@@ -129,31 +139,18 @@ onUnmounted(() => {
 /* INTRO & SKILLS 컨테이너 */
 .intro {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   position: relative; /* 가상 요소 위치 설정 */
   padding-bottom: 20px;
 }
 
-.intro::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px; /* border-bottom 두께 */
-  background: linear-gradient(90deg, #78ace4, #6f41b6); /* 그라디언트 적용 */
-}
 .skills ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto auto; 
-  gap: 15px;
-  padding: 0;
-  list-style: none;
-  max-width: 400px;
+  display: flex;
 }
 .skills li{
   text-align: center;
+  flex: 1;
 }
 .skills li:nth-child(5){
   grid-column: 2 / 4;
@@ -168,14 +165,19 @@ onUnmounted(() => {
 }
 /* INTRO & SKILLS 개별 영역 */
 
-.info, .skills {
-  width: 45%;
+.info {
+  width: 100%;
   box-sizing: border-box;
   position: relative; /* 가상 요소 위치 조정 */
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0;
 }
-
+.skills{
+  width: 55%;
+  box-sizing: border-box;
+  position: relative;
+  padding: 10px 0;
+  padding-bottom: 100px;
+}
 .info::before, .skills::before {
   content: "";
   position: absolute;
@@ -201,10 +203,27 @@ onUnmounted(() => {
   margin: 5px 0;
   font-size: 18px;
 }
-
+.skills li{
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 /* WHO AM I */
 .who-am-i {
   margin-top: 30px;
+  width: 400px;
+  position: relative;
+  padding-top: 20px;
+}
+.who-am-i::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* border-top 두께 */
+  background: linear-gradient(90deg, #78ace4, #6f41b6); /* 그라디언트 적용 */
 }
 
 .who-am-i p {
@@ -242,6 +261,7 @@ onUnmounted(() => {
     .h2{
       align-items: center;
       justify-content: center;
+      width: 100%;
     }
     h2.section_title{
       justify-content: center;
@@ -259,7 +279,13 @@ onUnmounted(() => {
       align-items: center;
       order: 3;
     }
-
+    .skills{
+      width: 45%;
+    }
+    .skills li{
+      width: 50px;
+      height: 50px;
+    }
   } 
   /* 반응형 모바일 */
   @media all and (max-width:767px) {
@@ -267,6 +293,9 @@ onUnmounted(() => {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+    .h2{
+      width: 100%;
     }
     h2.section_title{
       font-size: 50px;
@@ -286,12 +315,20 @@ onUnmounted(() => {
       align-items: center;
       width: 100%;
     }
-    .info, .skills{
+    .info{
       width: 100%;
     }
     .info h3, .skills h3, .who-am-i h3 {
       font-size: 24px;
       margin-bottom: 10px;
+    }
+    .skills{
+      width: 70%;
+      gap: 10px;
+    }
+    .skills li{
+      width: 50px;
+      height: 50px;
     }
     .section-one li,
     .section-one p{
@@ -324,6 +361,13 @@ onUnmounted(() => {
   .image-box{
     width: 300px;
     height: 400px;
+  }
+  .skills{
+    width: 400px;
+  }
+  .skills li{
+    width: 30px;
+    height: 30px;
   }
 }
 </style>

@@ -79,7 +79,7 @@
       <p class="clone_number number_four">04</p>
       <div class="clone_item">
         <div class="clone_container">
-          <p class="clone_name">Momentum Clone </p>
+          <p class="clone_name">Momentum </p>
           <p class="clone_title">개인 맞춤 대시보드 웹페이지</p>
           <p class="clone_txt">사용자는 현재시간, 랜덤명언, 날씨정보, <br>할일목록 기능을 
           사용할 수 있으며,<br> 로컬스토리지를 활용한 데이터 저장 및 <br>
@@ -231,6 +231,8 @@ onUnmounted(() => {
     background-color: #666;
     padding: 20px;
     border-radius: 10px;
+    width: 420px;
+    height: 450px;
   }
   .clone_container a{
     text-align: center;
