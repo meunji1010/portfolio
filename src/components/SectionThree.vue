@@ -127,6 +127,7 @@ const nextPage = () => {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1.5s ease-out, transform 0.8s ease-out;
+  margin-bottom: 200px;
 }
 .section_three.visible {
   opacity: 1;

@@ -57,11 +57,17 @@ const scrollToSection = (item) => {
   ul{
     display: flex;
     justify-content: flex-end;
-    background-color: #333;
+    background-color: #eee;
+    padding: 10px;
   }
   li{
     cursor: pointer;
     margin: 10px;
+    color: #888;
+    transition: all 0.5s linear;
+  }
+  li:hover{
+    color: #333;
   }
   .first{
     display: flex;
