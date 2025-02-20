@@ -4,7 +4,7 @@
     <div class="wrapper">
       <div class="image-box">
         <button class="prev-btn">&lt;</button>
-        <video src="./video/flashcard.mp4"></video>
+        
       </div>
       <div class="explane">
         <h5>모바일 플래시카드 퀴즈</h5>
