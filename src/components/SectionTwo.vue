@@ -283,7 +283,7 @@ onUnmounted(() => {
   }
   p.number_two, p.number_four{
     align-self: first baseline;
-    margin-left: 20%;
+    margin-left: 25%;
   }
   
   .section-two{
@@ -344,8 +344,8 @@ onUnmounted(() => {
     margin-bottom: 150px;
   }
   .section-two .clone_item > a{
-    width: 400px;
-    height: 220px;
+    width: 380px;
+    height: 200px;
   }
   h2.section_title{
     padding: 10px;
