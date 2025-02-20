@@ -281,6 +281,9 @@ button:nth-of-type(2){
   }
 /* 반응형 모바일 min */
   @media all and (max-width:479px) {
+    .section_three{
+      margin-bottom: 50px;
+    }
     h2.section_title{
       max-width: 320px;
       font-size: 40px;
