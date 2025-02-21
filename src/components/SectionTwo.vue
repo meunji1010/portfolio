@@ -221,6 +221,7 @@ onUnmounted(() => {
   .clone_img{
     background-size: cover;
     background-repeat: no-repeat;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
   /* 클론 화살표 */
   .click{
@@ -257,6 +258,7 @@ onUnmounted(() => {
     border-radius: 10px;
     width: 420px;
     height: 450px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
   .clone_container a{
     text-align: center;
@@ -381,6 +383,7 @@ onUnmounted(() => {
   .clone_container{
     max-width: 300px;
     height: 550px;
+    
   }
 
   .section-two .clone_wrap:nth-of-type(3) .clone_container{
