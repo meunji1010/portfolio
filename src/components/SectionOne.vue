@@ -358,12 +358,21 @@ onUnmounted(() => {
   .section-one span{
     font-size: 16px;
   }
+  .section_title{
+    width: 300px;
+  }
+  .text-content{
+    width: 90%;
+  }
+  .who-am-i{
+    width: inherit;
+  }
   .image-box{
     width: 300px;
     height: 400px;
   }
   .skills{
-    width: 400px;
+    width: 90%;
   }
   .skills li{
     width: 30px;

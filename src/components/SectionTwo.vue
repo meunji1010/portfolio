@@ -355,9 +355,10 @@ onUnmounted(() => {
     font-size: 40px;
   }
   .clone_container{
-    max-width: 360px;
-    height: 500px;
+    max-width: 300px;
+    height: 550px;
   }
+
   .section-two .clone_wrap:nth-of-type(3) .clone_container{
     height: 450px;
   }

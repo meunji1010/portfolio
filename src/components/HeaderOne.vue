@@ -7,7 +7,7 @@
             {{ item }}
           </li>
         </ul>
-      </nav>
+      </nav>  
     </header>
     <div class="first">
       <h1>EUNJI'S<br>PORTFOLIO</h1>
