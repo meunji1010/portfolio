@@ -100,7 +100,7 @@ onUnmounted(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 10px;
   opacity: 0;
   transform: translateY(50px); 
   transition: opacity 1.5s ease-out, transform 0.8s ease-out;
@@ -239,10 +239,10 @@ onUnmounted(() => {
   align-items: center;
 }
 .image-box {
-  background-size: cover;
-  width: 400px;
-  height: 500px;
-  
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 350px;
+  height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -257,6 +257,7 @@ onUnmounted(() => {
       justify-content: center;
       align-items: center;
       padding: 0;
+      padding-top: 50px;
     }
     .h2{
       align-items: center;
@@ -273,6 +274,9 @@ onUnmounted(() => {
     .image-box{
       margin-top: 20px;
       order: 1;
+      width: 300px;
+      height: 400px;
+      margin-bottom: 10px;
     }
     .text-content{
       justify-content: center;
@@ -334,11 +338,6 @@ onUnmounted(() => {
     .section-one p{
       font-size: 16px;
     }
-    .image-box{
-      width: 300px;
-      height: 400px;
-      margin-bottom: 10px;
-    } 
     .skills > ul{
       display: flex;
       flex-wrap: wrap;

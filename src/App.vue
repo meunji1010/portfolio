@@ -45,7 +45,7 @@ const handleScrollToSection = (sectionName) => {
 
   if (sectionName === "ABOUT ME") {
     targetSection = sectionOne.value;
-    offset = 130; 
+    offset = 70; 
   } else if (sectionName === "CLONE CODING") {
     targetSection = sectionTwo.value;
     offset = 100; 

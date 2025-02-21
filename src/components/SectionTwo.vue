@@ -9,7 +9,10 @@
     <div class="clone_wrap fade-item" ref="item0" :class="{ 'fade-in': isVisible.item0 }">
       <p class="clone_number number_one">01</p>
       <div class="clone_item">
-        <a href="https://meunji1010.github.io/netflix/"><div class="netflix clone_img" :style="{backgroundImage: `url(${imgRef[0].images})`}"></div></a>
+        <div class="clone_imgwrap">
+          <div class="click"><span>∨</span>  하단 영상 클릭시 웹페이지로 이동합니다 </div>
+          <a href="https://meunji1010.github.io/netflix/"><div class="netflix clone_img" :style="{backgroundImage: `url(${imgRef[0].images})`}"></div></a>
+        </div>
         <div class="clone_container">
           <p class="clone_name">Netflix Clone</p>
           <p class="clone_title">React 기반 웹 구현</p>
@@ -24,7 +27,7 @@
           <p>제작기간 : 2일</p>
           <p>제작 참여율 : 100%(개인프로젝트)<br>기획, UI디자인, 개발, 배포까지 전 과정 직접 수행</p>
           <p>배포방식 : GitHub</p>
-          <a href="https://github.com/meunji1010/netflix"><button>GitHub 방문하기</button></a>
+          <a href="https://github.com/meunji1010/netflix"><button>GitHub Link</button></a>
         </div>
       </div>
     </div>
@@ -45,9 +48,12 @@
           <p>제작기간 : 2일</p>
           <p>제작 참여율 : 100%(개인프로젝트)<br>기획, UI디자인, 개발, 배포까지 전 과정 직접 수행</p>
           <p>배포방식 : GitHub</p>
-          <a href=""><button>GitHub 방문하기</button></a>
+          <a href=""><button>GitHub Link</button></a>
         </div>
-        <a href="https://meunji1010.github.io/TESLA/index.html"><div class="tesla clone_img" :style="{backgroundImage: `url(${imgRef[1].images})`}"></div></a>
+        <div class="clone_imgwrap">
+          <div class="click"><span>∨</span>  하단 영상 클릭시 웹페이지로 이동합니다 </div>
+          <a href="https://meunji1010.github.io/TESLA/index.html"><div class="tesla clone_img" :style="{backgroundImage: `url(${imgRef[1].images})`}"></div></a>
+        </div>
       </div>
     </div>
 
@@ -55,7 +61,10 @@
     <div class="clone_wrap fade-item" ref="item2" :class="{ 'fade-in': isVisible.item2 }">
       <p class="clone_number number_three">03</p>
       <div class="clone_item">
-        <a href="https://meunji1010.github.io/AIRBNB/index.html"><div class="airbnb clone_img" :style="{backgroundImage: `url(${imgRef[2].images})`}"></div></a>
+        <div class="clone_imgwrap">
+          <div class="click"><span>∨</span>  하단 영상 클릭시 웹페이지로 이동합니다 </div>
+          <a href="https://meunji1010.github.io/AIRBNB/index.html"><div class="airbnb clone_img" :style="{backgroundImage: `url(${imgRef[2].images})`}"></div></a>
+        </div>
         <div class="clone_container">
           <p class="clone_name">Airbnb Clone</p>
           <p class="clone_title">반응형 숙박 예약 웹사이트</p>
@@ -69,7 +78,7 @@
           <p>제작기간 : 2일</p>
           <p>제작 참여율 : 100%(개인프로젝트)<br>기획, UI디자인, 개발, 배포까지 전 과정 직접 수행</p>
           <p>배포방식 : GitHub</p>
-          <a href="https://github.com/meunji1010/meunji1010.github.io/tree/main/AIRBNB"><button>GitHub 방문하기</button></a>
+          <a href="https://github.com/meunji1010/meunji1010.github.io/tree/main/AIRBNB"><button>GitHub Link</button></a>
         </div>
       </div>
     </div>
@@ -91,10 +100,13 @@
           <p>제작기간 : 2일</p>
           <p>제작 참여율 : 100%(개인프로젝트)<br>기획, UI디자인, 개발, 배포까지 전 과정 직접 수행</p>
           <p>배포방식 : GitHub</p>
-          <a href="https://github.com/meunji1010/meunji1010.github.io/tree/main/momentum"><button>GitHub 방문하기</button></a>
+          <a href="https://github.com/meunji1010/meunji1010.github.io/tree/main/momentum"><button>GitHub Link</button></a>
           <p></p>
         </div>
-        <a href="https://meunji1010.github.io/momentum/index.html"><div class="momentum clone_img" :style="{backgroundImage: `url(${imgRef[3].images})`}"></div></a>
+        <div class="clone_imgwrap">
+          <div class="click"><span>∨</span>  하단 영상 클릭시 웹페이지로 이동합니다 </div>
+          <a href="https://meunji1010.github.io/momentum/index.html"><div class="momentum clone_img" :style="{backgroundImage: `url(${imgRef[3].images})`}"></div></a>
+        </div>
       </div>
     </div>
   </div>
@@ -107,7 +119,8 @@ const imgRef = ref([
   {id:1, images:"./images/netflix_clone.webp"},
   {id:2, images:"./images/tesla_clone.webp"},
   {id:3, images:"./images/airbnb_clone.webp"},
-  {id:4, images:"./images/momentum_clone.webp"}
+  {id:4, images:"./images/momentum_clone.webp"},
+  {id:5, images:"./images/click.png"}
 ]);
 // 요소별 상태 관리
 const isVisible = ref({
@@ -195,7 +208,7 @@ onUnmounted(() => {
     margin-right: 20%;
   }
   /* 클론 이미지 */
-  .section-two .clone_item >a{
+  .section-two .clone_item .clone_imgwrap a{
     display: block;
     width: 650px;
     height: 400px;
@@ -208,6 +221,17 @@ onUnmounted(() => {
   .clone_img{
     background-size: cover;
     background-repeat: no-repeat;
+  }
+  /* 클론 화살표 */
+  .click{
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+  }
+  .click > span{
+    font-family: 'SBAggroB';
+    font-size: 20px;
+    font-weight: bold;
   }
   
   /* 클론이름 */
@@ -361,6 +385,12 @@ onUnmounted(() => {
 
   .section-two .clone_wrap:nth-of-type(3) .clone_container{
     height: 450px;
+  }
+  .click{
+    font-size: 13px;
+  }
+  .click > span{
+    font-size: 16px;
   }
 }
 
