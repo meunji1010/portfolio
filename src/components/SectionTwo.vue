@@ -353,7 +353,10 @@ onUnmounted(() => {
       display: flex;
       flex-direction: column; 
     }
-
+    .section-two .clone_item .clone_imgwrap a{
+      width: 500px;
+      height: 320px;
+    }
     .clone_wrap:nth-of-type(2) .clone_item,
     .clone_wrap:nth-of-type(4) .clone_item {
       flex-direction: column-reverse;
@@ -385,7 +388,11 @@ onUnmounted(() => {
     height: 550px;
     
   }
-
+  .section-two .clone_item .clone_imgwrap a{
+    width: 350px;
+    height: 220px;
+  }
+  
   .section-two .clone_wrap:nth-of-type(3) .clone_container{
     height: 450px;
   }
