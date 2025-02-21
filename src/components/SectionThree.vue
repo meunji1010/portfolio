@@ -210,6 +210,10 @@ button:nth-of-type(2){
   text-align: center;
   padding: 10px;
   margin: 20px;
+  transition: 0.3s;
+}
+.card:hover{
+  transform: scale(1.2);
 }
 
 /* 카드 이미지 */
@@ -269,6 +273,7 @@ button:nth-of-type(2){
       height: 140px;
       margin: 20px;
     }
+
     .card_txt{
       font-size: 12px;
       white-space: nowrap;
