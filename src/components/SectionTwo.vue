@@ -327,6 +327,7 @@ onUnmounted(() => {
       display: flex;
       flex-direction: column; 
     }
+
     .clone_wrap:nth-of-type(2) .clone_item,
     .clone_wrap:nth-of-type(4) .clone_item {
       flex-direction: column-reverse;
@@ -352,6 +353,13 @@ onUnmounted(() => {
   h2.section_title{
     padding: 10px;
     font-size: 40px;
+  }
+  .clone_container{
+    max-width: 360px;
+    height: 500px;
+  }
+  .section-two .clone_wrap:nth-of-type(3) .clone_container{
+    height: 450px;
   }
 }
 
