@@ -10,6 +10,7 @@
     <div ref="sectionThree">
       <SectionThree />
     </div>
+
   </div>
 </template>
 
@@ -19,6 +20,7 @@ import HeaderOne from './components/HeaderOne.vue';
 import SectionOne from './components/SectionOne.vue';
 import SectionTwo from './components/SectionTwo.vue';
 import SectionThree from './components/SectionThree.vue';
+import FooterComponents from './components/FooterComponents.vue';
 
 const isScrolled = ref(false);
 const sectionOne = ref(null);

@@ -45,6 +45,7 @@
               <li :style="{backgroundImage: `url(${icon[5].img})`}"></li>
               <li :style="{backgroundImage: `url(${icon[6].img})`}"></li>
               <li :style="{backgroundImage: `url(${icon[7].img})`}"></li>
+              <li :style="{backgroundImage: `url(${icon[8].img})`}"></li>
             </ul>
           </div>
   </div>
@@ -62,7 +63,9 @@ const icon = ref([
   {id:5, img:"./images/Illustrator.svg"},
   {id:6, img:"./images/React.svg"},
   {id:7, img:"./images/Vue.png"},
-  {id:8, img:"./images/Sass.svg"}
+  {id:8, img:"./images/Sass.svg"},
+  {id:9, img:"./images/Figma.svg"}
+
 ]);
 const img = ref([{id:1, img:"./images/me.jpg"}])
 const sectionOne = ref(null);
@@ -149,6 +152,7 @@ onUnmounted(() => {
 
 .skills ul {
   display: flex;
+  flex-wrap: wrap;
 }
 .skills li{
   text-align: center;
