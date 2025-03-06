@@ -44,6 +44,7 @@
               <li :style="{backgroundImage: `url(${icon[4].img})`}"></li>
               <li :style="{backgroundImage: `url(${icon[5].img})`}"></li>
               <li :style="{backgroundImage: `url(${icon[6].img})`}"></li>
+              <li :style="{backgroundImage: `url(${icon[7].img})`}"></li>
             </ul>
           </div>
   </div>
@@ -60,7 +61,8 @@ const icon = ref([
   {id:4, img:"./images/photoshop.png"},
   {id:5, img:"./images/Illustrator.svg"},
   {id:6, img:"./images/React.svg"},
-  {id:7, img:"./images/Vue.png"}
+  {id:7, img:"./images/Vue.png"},
+  {id:8, img:"./images/Sass.svg"}
 ]);
 const img = ref([{id:1, img:"./images/me.jpg"}])
 const sectionOne = ref(null);
